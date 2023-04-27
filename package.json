@@ -1,0 +1,27 @@
+{
+  "name": "konverta-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server/server.js --ignore client",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"" 
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwiputrapurnawa/konverta-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwiputrapurnawa/konverta-web/issues"
+  },
+  "homepage": "https://github.com/dwiputrapurnawa/konverta-web#readme",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
