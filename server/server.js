@@ -28,6 +28,10 @@ app.use(cors({
     credentials: true
 }));
 
+app.get("/", (req, res) => {
+    res.send({"server_status": "Up"});
+})
+
 app.post("/api/imgtopdf", (req, res) => {
     uploadImage(req, res, (err) => {
         if(err) {
@@ -47,11 +51,10 @@ app.post("/api/imgtopdf", (req, res) => {
     })
 });
 
+const PORT = process.env.PORT || 8080
 
-
-
-app.listen(process.env.SERVER_PORT, () => {
-    console.log("Server running at port " + process.env.SERVER_PORT);
+app.listen(PORT, () => {
+    console.log("Server running at port " + PORT);
 })
 
 

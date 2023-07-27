@@ -30,7 +30,7 @@ function App() {
 
     setUploading(true);
 
-    const url = "http://localhost:35033/api/imgtopdf";
+    const url = "http://localhost:8080/api/imgtopdf";
     const options = {
       method: "POST",
       body: formData,
@@ -88,7 +88,7 @@ function App() {
 
           {/* <Select type="primary" defaultValue="Select Size" options={sizeOptions} /> */}
 
-          <Button disabled={pdf === "" ? true : false} icon={<DownloadOutlined />} type="primary" shape="round" size="large" href={"http://localhost:35033/pdf/" + pdf} target="__blank">Download PDF</Button>
+          <Button disabled={pdf === "" ? true : false} icon={<DownloadOutlined />} type="primary" shape="round" size="large" href={"http://localhost:8080/pdf/" + pdf} target="__blank">Download PDF</Button>
         </Space>
       </Space>
     </div>
